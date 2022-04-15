@@ -750,7 +750,38 @@ h4 {
     }
   }
 }
+#pagination{
+  display: flex;
+}
+.num{
+  display: none;
+}
+.activeNum{
+display: block;
+animation: showBlock 1s linear forwards;
+}
 
+.petsPets__card{
+animation: showBlock 0.5s linear forwards;
+}
+.disableBtn {
+border: 2px solid #cdcdcd;
+background: transparent;
+color: #cdcdcd;
+cursor: default;
+/* новенькое */
+pointer-events: none;
+animation: showBlock 0.5s linear forwards;
+}
+
+@keyframes showBlock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 // адаптив
 @media screen and (max-width: 1279px) {

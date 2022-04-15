@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "ArialItaic";
   src: local("Arial Italic"), local("Arial-Italic"), url("../fonts/Arial-ItalicMT.woff2") format("woff2"), url("../fonts/Arial-ItalicMT.woff") format("woff"), url("../fonts/Arial-ItalicMT.ttf") format("truetype");
@@ -772,6 +773,53 @@ h4 {
   left: 0%;
 }
 
+#pagination {
+  display: flex;
+}
+
+.num {
+  display: none;
+}
+
+.activeNum {
+  display: block;
+  -webkit-animation: showBlock 1s linear forwards;
+          animation: showBlock 1s linear forwards;
+}
+
+.petsPets__card {
+  -webkit-animation: showBlock 0.5s linear forwards;
+          animation: showBlock 0.5s linear forwards;
+}
+
+.disableBtn {
+  border: 2px solid #cdcdcd;
+  background: transparent;
+  color: #cdcdcd;
+  cursor: default;
+  /* новенькое */
+  pointer-events: none;
+  -webkit-animation: showBlock 0.5s linear forwards;
+          animation: showBlock 0.5s linear forwards;
+}
+
+@-webkit-keyframes showBlock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showBlock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 1279px) {
   .container {
     padding: 0 30px;

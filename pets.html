@@ -57,47 +57,7 @@
     <section class="ourFriends ourPets">
         <div class="container ourFriends__wrapper ourFriends__pets">
             <h3 class="ourFriends__wrapper__title ourFriends__pets__title">Our friends who are&nbsp;looking for a house</h3>
-            <div class="pets petsPets">
-              <div class="pets__pet petsPets__card" >
-                <img class="pets__pet__image" src="img/pets-katrine.jpg" alt="pets-katrine">
-                <h5 class="pets__pet__title">Katrine</h5>
-                <button id="btn-Katrine" class="btn btnLearn pets__pet__btn">Learn more</button>
-              </div>
-              <div class="pets__pet petsPets__card">
-                <img class="pets__pet__image" src="img/pets-jennifer.jpg" alt="pets-jennifer">
-                <h5 class="pets__pet__title">Jennifer</h5>
-                <button id="btn-Jennifer" class="btn btnLearn pets__pet__btn" href="#">Learn more</button>
-              </div>
-              <div class="pets__pet petsPets__card">
-                <img class="pets__pet__image" src="img/pets-woody.jpg" alt="pets-woody">
-                <h5 class="pets__pet__title">Woody</h5>
-                <button id="btn-Woody" class="btn btnLearn pets__pet__btn" href="#">Learn more</button>
-              </div>
-              <div class="pets__pet petsPets__card">
-                <img class="pets__pet__image" src="img/pets-sofia.jpg" alt="pets-sofia">
-                <h5 class="pets__pet__title">Sophia</h5>
-                <button id="btn-Sophia" class="btn btnLearn pets__pet__btn" href="#">Learn more</button>
-              </div>
-              <div class="pets__pet petsPets__card">
-                <img class="pets__pet__image" src="img/pets-timmy.jpg" alt="pets-timmy">
-                <h5 class="pets__pet__title">Timmy</h5>
-                <button id="btn-Timmy" class="btn btnLearn pets__pet__btn" href="#">Learn more</button>
-              </div>
-              <div class="pets__pet petsPets__card">
-                <img class="pets__pet__image" src="img/pets-charly.jpg" alt="pets-charly">
-                <h5 class="pets__pet__title">Charly</h5>
-                <button id="btn-Charly" class="btn btnLearn pets__pet__btn" href="#">Learn more</button>
-              </div>
-              <div class="pets__pet petsPets__card">
-                <img class="pets__pet__image" src="img/pets-scarlet.jpg" alt="pets-scarlet">
-                <h5 class="pets__pet__title">Scarlett</h5>
-                <button id="btn-Scarlett" class="btn btnLearn pets__pet__btn" href="#">Learn more</button>
-              </div>
-              <div class="pets__pet petsPets__card">
-                <img class="pets__pet__image" src="img/pets-Freddie.jpg" alt="pets-Freddie">
-                <h5 class="pets__pet__title">Freddie</h5>
-                <button id="btn-Freddie" class="btn btnLearn pets__pet__btn" href="#">Learn more</button>
-              </div>
+            <div class="pets petsPets" id="table">
             </div>
             <div class="pagination">
                 <div class="pagination__circle disableBtn" id="arrowDown">
@@ -110,9 +70,26 @@
                     <path d="M0.958984 6.08789L9.99219 10.7852V9.44727L2.48242 5.53125L9.99219 1.625V0.287109L0.958984 4.98438V6.08789Z" fill="#292929"/>
                     </svg>  
                 </div>
-                <div class="pagination__circle disableBtn" id="num">
-                    1
-                </div>
+                <div class="pagination__circle disableBtn">
+                  <ul id="pagination">
+                      <li class="num">1</li>
+                      <li class="num">2</li>
+                      <li class="num">3</li>
+                      <li class="num">4</li>
+                      <li class="num">5</li>
+                      <li class="num">6</li>
+                      <li class="num">7</li>
+                      <li class="num">8</li>
+                      <li class="num">9</li>
+                      <li class="num">10</li>
+                      <li class="num">11</li>
+                      <li class="num">12</li>
+                      <li class="num">13</li>
+                      <li class="num">14</li>
+                      <li class="num">15</li>
+                      <li class="num">16</li>
+                  </ul> 
+              </div>
                 <div class="pagination__circle" id="arrowNext">
                     <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.04102 6.08789L0.0078125 10.7852V9.44727L7.51758 5.53125L0.0078125 1.625V0.287109L9.04102 4.98438V6.08789Z" fill="#292929"/>
@@ -160,8 +137,9 @@
   
     <div id="modal"></div>
     <script src="js/menu.js"></script>
+    <script src="js/pagination.js"></script>
     <script src="js/pets-modal.js"></script>
     <script src="js/modal.js"></script>
-    <script src="js/pagination.js"></script>
+
 </body>
 </html>
