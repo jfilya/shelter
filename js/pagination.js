@@ -621,33 +621,6 @@ function go() {
   }
 
 
-
-// let countOfItems = Math.ceil(pets.length / notesOnPage);// количество страниц
-
-
-
-// let items=[];
-// выводим количество индексов со страницами относительно количества отображаемых картинок и коичества их отображения
-// for(let i=1; i<=countOfItems; i++){
-
-//     let li = document.createElement('li');
-//     li.innerHTML = i;
-//     li.classList.add('num');//неактивная кнопка
-//     pagination.appendChild(li);
-//     items.push(li);
-
-// }
-
-
-// функция для отображения нужных данных при клике на конкретную кнопку
-// for (let item of items){
-//     item.addEventListener('click', function(){
-//         showPage(this);
-//     })
-
-//     }
-
-
 showPage(items[0]);   
 }
 
