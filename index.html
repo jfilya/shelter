@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/style.css" />
+    <title>Cozy House</title>
+  </head>
+  <body>
+    <div class="main">
+      <header class="headerMain">
+        <div class="container headerMain__wrapper">
+          <a href="#" class="logoMain disable">
+            <h1 class="logoMain__title" id="logoTitle">Cozy House</h1>
+            <span class="logoMain__info" id="logoInfo">Shelter for pets in Boston</span>
+          </a>
+          <nav>
+            <ul class="navigationMain" id="menu">
+              <li class="navigationMain__list">
+                <a class="navigationMain__list__active" href="index.html"
+                  >About the shelter</a
+                >
+              </li>
+              <li class="navigationMain__list">
+                <a class="navigationMain__list__link" href="pets.html">Our pets</a>
+              </li>
+              <li class="navigationMain__list">
+                <a id="listHelp" class="navigationMain__list__link" href="#help"
+                  >Help the shelter</a
+                >
+              </li>
+              <li class="navigationMain__list">
+                <a id="listContact" class="navigationMain__list__link" href="#contact">Contacts</a>
+              </li>
+            </ul>
+          </nav> 
+          <a href="#" class="logoMain disable logoMenu">
+            <h1 class="logoMain__title" id="logoTitle">Cozy House</h1>
+            <span class="logoMain__info" id="logoInfo">Shelter for pets in Boston</span>
+          </a> 
+          <svg
+            class="burgerMenu"
+            id="btn-open"
+            width="30"
+            height="22"
+            viewBox="0 0 30 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line y1="21" x2="30" y2="21" stroke="#F1CDB3" stroke-width="2" />
+            <line y1="11" x2="30" y2="11" stroke="#F1CDB3" stroke-width="2" />
+            <line y1="1" x2="30" y2="1" stroke="#F1CDB3" stroke-width="2" />
+          </svg>
+          <div id="overlay" class="overlay"></div>
+        </div>
+      </header>
+      <section class="notOnly">
+        <div class="container notOnly__wrapper">
+          <div class="notOnly__wrapper__left">
+            <h2 class="notOnly__wrapper__left-title">
+              Not only people need a house
+            </h2>
+            <p class="notOnly__wrapper__left-text">
+              We offer to give a chance to a little and nice puppy with an
+              extremely wide and open heart. He or she will love you more than
+              anybody else in the world, you will see!
+            </p>
+            <div class="notOnly__wrapper__left-btn">
+              <a class="btn notOnly__wrapper__left-btn" href="#ourFriend">Make a friend</a>
+            </div>
+          </div>
+          <img
+            class="notOnly__wrapper__rigth"
+            src="img/start-screen-puppy.png"
+            alt="Puppy"
+          />
+        </div>
+      </section>
+    </div>
+    <section class="about">
+      <div class="container about__wrapper">
+        <img class="about__wrapper__image" src="img/about-pets.png" alt="pets" />
+        <div class="about__wrapper__text">
+          <h3 class="about__wrapper__text-title">
+            About the shelter “Cozy&nbsp;House”
+          </h3>
+          <p class="about__wrapper__text-paragraphOne">
+            Currently we have 121 dogs and 342 cats on our hands and statistics
+            show that only 20% of them will find a family. The others will
+            continue to live with us and will be waiting for a lucky chance to
+            become dearly loved.
+          </p>
+          <p class="about__wrapper__text-paragraphTwo">
+            We feed our wards with the best food and make sure that they do not
+            get sick, feel comfortable (including psychologically) and well. We
+            are supported by 87 volunteers and 28 employees of various skill
+            levels. About 12% of the animals are taken by the shelter staff.
+            Taking care of the animals, they become attached to the pets and
+            would hardly ever leave them alone.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="ourFriends" id="ourFriend">
+      <div class="container ourFriends__wrapper carousel" id="carousel">
+        <h3 class="ourFriends__wrapper__title">Our friends who are&nbsp;looking for a house</h3>
+        <div class="petsMain">
+          <div class="pets base" id="base">
+            
+          </div>
+        </div>
+        <div class="arrows">
+          <button class="prev arrows__btn arrows__left">
+            <svg 
+            width="52"
+            height="52"
+            viewBox="0 0 52 52"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="26" cy="26" r="25" stroke="#F1CDB3" stroke-width="2" />
+            <path d="M33 25V27H22V29L19 26L22 23V25H33Z" fill="#292929" />
+          </svg>
+          </button>
+          <button class="next arrows__btn arrows__right">
+            <svg
+            width="52"
+            height="52"
+            viewBox="0 0 52 52"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="26" cy="26" r="25" stroke="#F1CDB3" stroke-width="2" />
+            <path d="M19 25V27H30V29L33 26L30 23V25H19Z" fill="#292929" />
+          </svg>          
+          </button>
+
+        </div>
+        <div class="ourFriends__wrapper__btn">
+          <a class="btn" href="pets.html">Get to know the rest</a>
+        </div>
+      </div>
+    </section>
+    <section class="help" id="help">
+      <div class="container help__wrapper">
+        <h3 class="help__wrapper__title">How you can help our&nbsp;shelter</h3>
+        <div class="icons">
+          <div class="icons__icon">
+            <img class="icons__icon__image" src="img/icon-pet-food.svg" alt="Pet food">
+            <h5 class="icons__icon__title">Pet food</h5>
+          </div>
+          <div class="icons__icon">
+            <img class="icons__icon__image" src="img/icon-transportation.svg" alt="transportation">
+            <h5 class="icons__icon__title">Transportation</h5>
+          </div>
+          <div class="icons__icon">
+            <img class="icons__icon__image" src="img/icon-toys.svg" alt="toys">
+            <h5 class="icons__icon__title">Toys</h5>
+          </div>
+          <div class="icons__icon">
+            <img class="icons__icon__image" src="img/icon-bowls-and-cups.svg" alt="bowls-and-cups">
+            <h5 class="icons__icon__title">Bowls and cups</h5>
+          </div>
+          <div class="icons__icon">
+            <img class="icons__icon__image" src="img/icon-shampoos.svg" alt="shampoos">
+            <h5 class="icons__icon__title">Shampoos</h5>
+          </div>
+          <div class="icons__icon">
+            <img class="icons__icon__image" src="img/icon-vitamins.svg" alt="vitamins">
+            <h5 class="icons__icon__title">Vitamins</h5>
+          </div>
+          <div class="icons__icon">
+            <img class="icons__icon__image" src="img/icon-medicines.svg" alt="medicines">
+            <h5 class="icons__icon__title">Medicines</h5>
+          </div>
+          <div class="icons__icon">
+            <img class="icons__icon__image" src="img/icon-collars-leashes.svg" alt="collars-leashes">
+            <h5 class="icons__icon__title">Collars / leashes</h5>
+          </div>
+          <div class="icons__icon">
+            <img class="icons__icon__image" src="img/icon-sleeping-area.svg" alt="sleeping-area">
+            <h5 class="icons__icon__title">Sleeping areas</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="addition">
+      <div class="container addition__wrapper">
+        <img class="addition__wrapper__image" src="img/donation-dog.png" alt="donation-dog">
+        <div class="addition__wrapper__text">
+          <h3 class="addition__wrapper__text-title">You can also make&nbsp;a&nbsp;donation</h3>
+          <p class="addition__wrapper__text-info">Name of the bank / Type of bank account</p>
+          <a class="addition__wrapper__text-credit" href="#"><svg width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25.9815 23H4.01915C1.80285 23 0 21.2046 0 19.0001V3.9999C0 1.79421 1.80285 0 4.01915 0H25.9808C28.196 0 30 1.79421 30 3.9999V19.0001C30.0006 21.2052 28.1972 23 25.9815 23ZM4.01915 1.14285C2.43563 1.14285 1.14836 2.42396 1.14836 3.9999V19.0001C1.14836 20.5755 2.43563 21.8571 4.01915 21.8571H25.9808C27.5638 21.8571 28.8516 20.5755 28.8516 19.0001V3.9999C28.8516 2.42396 27.5638 1.14285 25.9808 1.14285H4.01915ZM20.7037 3.35993C22.1363 3.35993 23.2977 4.51532 23.2977 5.94153C23.2977 7.36774 22.1368 8.52376 20.7037 8.52376C19.2706 8.52376 18.1097 7.36783 18.1097 5.94153C18.1097 4.51523 19.2712 3.35993 20.7037 3.35993ZM24.3204 3.35993C25.7529 3.35993 26.9151 4.51532 26.9151 5.94153C26.9151 7.36774 25.7536 8.52376 24.3204 8.52376C22.8873 8.52376 21.7264 7.36783 21.7264 5.94153C21.7264 4.51523 22.8879 3.35993 24.3204 3.35993ZM3.0861 16.3339H7.8683V18.0481H3.0861V16.3339ZM9.43467 16.3339H14.2175V18.0481H9.43467V16.3339ZM15.782 16.3339H20.5659V18.0481H15.782V16.3339ZM22.1305 16.3339H26.9144V18.0481H22.1305V16.3339ZM3.0861 3.36046H12.1263V5.07474H3.0861V3.36046ZM3.0861 6.76208H7.86946V8.47637H3.0861V6.76208Z" fill="#292929"/>
+            </svg>&nbsp;8380&nbsp;2880&nbsp;8028&nbsp;8791&nbsp;7435</a>
+            <p class="addition__wrapper__text-legal">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+        </div>
+      </div>
+    </section>
+    <footer class="foot" id="contact">
+      <div class="container foot__wrap">
+        <div class="footer__wrapper">
+        <div class="footer__wrapper__contact footer__wrapper__contacts">
+          <h4 class="footer__wrapper__contact-title">
+            For questions and suggestions
+          </h4>
+          <a class="footer__wrapper__contact-contacts footer__wrapper__contact-contactsMail" href="mailto:email@shelter.com">
+            <img src="img/icon-email.svg" alt="icon"> 
+            email@shelter.com
+          </a>
+          <a class="footer__wrapper__contact-contacts" href="tel:+136745677554">
+            <img src="img/icon-phone.svg" alt="icon">
+            +13 674 567 75 54</a>
+        </div>
+        <div class="footer__wrapper__contact footer__wrapper__adress">
+          <h4 class="footer__wrapper__contact-title footer__wrapper__adress-title">
+            We are waiting for your visit
+          </h4>
+          <a class="footer__wrapper__contact-contacts footer__wrapper__adress-boston" target="_blank" href="https://goo.gl/maps/GwvPLVq8gFBKhMvo6">
+            <img src="img/icon-marker.svg" alt="icon"> 
+            1 Central Street, Boston (entrance from the store)</a>
+          <a class="footer__wrapper__contact-contacts" target="_blank" href="https://goo.gl/maps/5ZFVSWFYW5zXVfXB7">
+            <img src="img/icon-marker.svg" alt="icon">
+            18 South Park, London 
+          </a>
+        </div>
+      </div>
+        <img class="foot__wrap__image" src="img/footer-puppy.png" alt="Puppy">
+      </div>
+    </footer>
+
+    <div id="modal" class="modal"></div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/pets.js"></script>  
+    <script src="js/pets-modal.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/tiny.js"></script>
+    <script>
+      var options = {
+        base: {
+          container: "",
+          slideBy: "page",
+          mouseDrag: true,
+          pagination: false,
+          prevButton: ".prev",
+          nextButton: ".next",
+          responsive: {
+            0: {
+              items: 1,
+            },
+            768: { 
+              items: 2,
+            },
+            1280: {
+              items: 3,
+            },
+          },
+        },
+      };
+      for (var i in options) {
+        var item = options[i];
+        item.container = "#" + i;
+        item.swipeAngle = false;
+        if (!item.speed) {
+          item.speed = speed;
+        }
+
+        if (doc.querySelector(item.container)) {
+          sliders[i] = tns(options[i]);
+
+          // call test functions
+          if (isTestPage && initFns[i]) {
+            initFns[i]();
+          }
+         
+
+          // test responsive pages
+        } else if (i.indexOf("responsive") >= 0) {
+          if (isTestPage && initFns[i]) {
+            initFns[i]();
+          }
+        }
+        // goto
+        if (doc.querySelector("#base_wrapper")) {
+          var goto = doc.querySelector("#base_wrapper .goto-controls"),
+            gotoBtn = goto.querySelector(".button"),
+            gotoInput = goto.querySelector("input");
+
+          gotoBtn.onclick = function (event) {
+            var index = gotoInput.value;
+            sliders["base"].goTo(index);
+          };
+        }
+      }
+
+
+    </script>
+
+  </body>
+</html>

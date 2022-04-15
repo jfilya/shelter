@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/style.css" />
+    <title>Cozy House</title>
+</head>
+<body>
+    <header class="headerMain headerPets">
+        <div class="container headerMain__wrapper">
+          <a href="index.html" class="logoMain logoPets">
+            <h1 class="logoMain__title logoPets__title" id="logoTitle">Cozy House</h1>
+            <span class="logoMain__info logoPets__info" id="logoInfo">Shelter for pets in Boston</span>
+          </a>
+          <nav>
+            <ul class="navigationMain navigationPets" id="menu">
+              <li class="navigationMain__list navigationPets__list">
+                <a class="navigationMain__list__link navigationPets__list__link" href="index.html"
+                  >About the shelter</a
+                >
+              </li>
+              <li class="navigationMain__list navigationPets__list">
+                <a class="navigationMain__list__active navigationPets__list__active" href="pets.html">Our pets</a>
+              </li>
+              <li class="navigationMain__list navigationPets__list">
+                <a id="listHelp" class="navigationMain__list__link navigationPets__list__link" href="index.html#help"
+                  >Help the shelter</a
+                >
+              </li>
+              <li class="navigationMain__list navigationPets__list">
+                <a id="listContact" class="navigationMain__list__link navigationPets__list__link" href="#contact">Contacts</a>
+              </li>
+            </ul>
+        </nav>
+        <a href="index.html" class="logoMain logoPets disable logoMenu ">
+          <h1 class="logoMain__title logoPets__title" id="logoTitle">Cozy House</h1>
+          <span class="logoMain__info logoPets__info" id="logoInfo">Shelter for pets in Boston</span>
+        </a>
+          <svg
+            class="burgerMenu"
+            id="btn-open"
+            width="30"
+            height="22"
+            viewBox="0 0 30 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line y1="21" x2="30" y2="21" stroke="#000000" stroke-width="2" />
+            <line y1="11" x2="30" y2="11" stroke="#000000" stroke-width="2" />
+            <line y1="1" x2="30" y2="1" stroke="#000000" stroke-width="2" />
+          </svg>
+          <div id="overlay" class="overlay"></div>
+        </div>
+    </header>
+    <section class="ourFriends ourPets">
+        <div class="container ourFriends__wrapper ourFriends__pets">
+            <h3 class="ourFriends__wrapper__title ourFriends__pets__title">Our friends who are&nbsp;looking for a house</h3>
+            <div class="pets petsPets">
+              <div class="pets__pet petsPets__card" >
+                <img class="pets__pet__image" src="img/pets-katrine.jpg" alt="pets-katrine">
+                <h5 class="pets__pet__title">Katrine</h5>
+                <button id="btn-Katrine" class="btn btnLearn pets__pet__btn">Learn more</button>
+              </div>
+              <div class="pets__pet petsPets__card">
+                <img class="pets__pet__image" src="img/pets-jennifer.jpg" alt="pets-jennifer">
+                <h5 class="pets__pet__title">Jennifer</h5>
+                <button id="btn-Jennifer" class="btn btnLearn pets__pet__btn" href="#">Learn more</button>
+              </div>
+              <div class="pets__pet petsPets__card">
+                <img class="pets__pet__image" src="img/pets-woody.jpg" alt="pets-woody">
+                <h5 class="pets__pet__title">Woody</h5>
+                <button id="btn-Woody" class="btn btnLearn pets__pet__btn" href="#">Learn more</button>
+              </div>
+              <div class="pets__pet petsPets__card">
+                <img class="pets__pet__image" src="img/pets-sofia.jpg" alt="pets-sofia">
+                <h5 class="pets__pet__title">Sophia</h5>
+                <button id="btn-Sophia" class="btn btnLearn pets__pet__btn" href="#">Learn more</button>
+              </div>
+              <div class="pets__pet petsPets__card">
+                <img class="pets__pet__image" src="img/pets-timmy.jpg" alt="pets-timmy">
+                <h5 class="pets__pet__title">Timmy</h5>
+                <button id="btn-Timmy" class="btn btnLearn pets__pet__btn" href="#">Learn more</button>
+              </div>
+              <div class="pets__pet petsPets__card">
+                <img class="pets__pet__image" src="img/pets-charly.jpg" alt="pets-charly">
+                <h5 class="pets__pet__title">Charly</h5>
+                <button id="btn-Charly" class="btn btnLearn pets__pet__btn" href="#">Learn more</button>
+              </div>
+              <div class="pets__pet petsPets__card">
+                <img class="pets__pet__image" src="img/pets-scarlet.jpg" alt="pets-scarlet">
+                <h5 class="pets__pet__title">Scarlett</h5>
+                <button id="btn-Scarlett" class="btn btnLearn pets__pet__btn" href="#">Learn more</button>
+              </div>
+              <div class="pets__pet petsPets__card">
+                <img class="pets__pet__image" src="img/pets-Freddie.jpg" alt="pets-Freddie">
+                <h5 class="pets__pet__title">Freddie</h5>
+                <button id="btn-Freddie" class="btn btnLearn pets__pet__btn" href="#">Learn more</button>
+              </div>
+            </div>
+            <div class="pagination">
+                <div class="pagination__circle disableBtn" id="arrowDown">
+                    <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.9945 6.08789L24.0277 10.7852V9.44727L16.518 5.53125L24.0277 1.625V0.287109L14.9945 4.98438V6.08789ZM0.923438 6.08789L9.95664 10.7852V9.44727L2.44688 5.53125L9.95664 1.625V0.287109L0.923438 4.98438V6.08789Z" fill="#292929"/>
+                    </svg>                             
+                </div>
+                <div class="pagination__circle disableBtn" id="arrowPrev">
+                    <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.958984 6.08789L9.99219 10.7852V9.44727L2.48242 5.53125L9.99219 1.625V0.287109L0.958984 4.98438V6.08789Z" fill="#292929"/>
+                    </svg>  
+                </div>
+                <div class="pagination__circle disableBtn" id="num">
+                    1
+                </div>
+                <div class="pagination__circle" id="arrowNext">
+                    <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.04102 6.08789L0.0078125 10.7852V9.44727L7.51758 5.53125L0.0078125 1.625V0.287109L9.04102 4.98438V6.08789Z" fill="#292929"/>
+                    </svg>
+                </div>
+                <div class="pagination__circle" id="arrowUp">
+                    <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.0055 6.08789L0.972265 10.7852V9.44727L8.48203 5.53125L0.972265 1.625V0.287109L10.0055 4.98438V6.08789ZM24.0766 6.08789L15.0434 10.7852V9.44727L22.5531 5.53125L15.0434 1.625V0.287109L24.0766 4.98438V6.08789Z" fill="#292929"/>
+                    </svg>                                                           
+                </div>
+            </div>
+          </div>
+    </section>
+    <footer class="foot" id="contact">
+        <div class="container foot__wrap">
+          <div class="footer__wrapper">
+          <div class="footer__wrapper__contact footer__wrapper__contacts">
+            <h4 class="footer__wrapper__contact-title">
+              For questions and suggestions
+            </h4>
+            <a class="footer__wrapper__contact-contacts footer__wrapper__contact-contactsMail" href="mailto:email@shelter.com">
+              <img src="img/icon-email.svg" alt="icon"> 
+              email@shelter.com
+            </a>
+            <a class="footer__wrapper__contact-contacts" href="tel:+1367456775 54">
+              <img src="img/icon-phone.svg" alt="icon">
+              +13 674 567 75 54</a>
+          </div>
+          <div class="footer__wrapper__contact footer__wrapper__adress">
+            <h4 class="footer__wrapper__contact-title footer__wrapper__adress-title">
+              We are waiting for your visit
+            </h4>
+            <a class="footer__wrapper__contact-contacts footer__wrapper__adress-boston" target="_blank" href="https://goo.gl/maps/GwvPLVq8gFBKhMvo6">
+              <img src="img/icon-marker.svg" alt="icon"> 
+              1 Central Street, Boston (entrance from the store)</a>
+            <a class="footer__wrapper__contact-contacts" target="_blank" href="https://goo.gl/maps/5ZFVSWFYW5zXVfXB7">
+              <img src="img/icon-marker.svg" alt="icon">
+              18 South Park, London 
+            </a>
+          </div>
+        </div>
+          <img class="foot__wrap__image" src="img/footer-puppy.png" alt="Puppy">
+        </div>
+    </footer>
+  
+    <div id="modal"></div>
+    <script src="js/menu.js"></script>
+    <script src="js/pets-modal.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/pagination.js"></script>
+</body>
+</html>
