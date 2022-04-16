@@ -890,7 +890,11 @@ animation: showBlock 0.5s linear forwards;
   .logoMenu.activeMenu{
     opacity:1;
     position: fixed;
+    top:30px;
   }
+  // .logoPets.activeMenu{
+  //   position: absolute;
+  // }
   .item{
     padding-left: 20px;
     padding-right: 20px;
@@ -954,6 +958,9 @@ animation: showBlock 0.5s linear forwards;
   }
   .transform {
     transform: rotate(-90deg);
+    position: sticky;
+  }
+  .burgerMenuMain{
     position: fixed;
   }
   .navigationMain {

@@ -926,6 +926,7 @@ h4 {
   .logoMenu.activeMenu {
     opacity: 1;
     position: fixed;
+    top: 30px;
   }
 
   .item {
@@ -992,6 +993,11 @@ h4 {
 
   .transform {
     transform: rotate(-90deg);
+    position: -webkit-sticky;
+    position: sticky;
+  }
+
+  .burgerMenuMain {
     position: fixed;
   }
 
