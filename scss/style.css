@@ -23,13 +23,16 @@
   font-weight: 700;
   font-style: normal;
 }
+html {
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
   -webkit-text-size-adjust: none;
      -moz-text-size-adjust: none;
           text-size-adjust: none;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 h1,
