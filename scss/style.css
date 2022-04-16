@@ -613,24 +613,24 @@ h4 {
   padding: 60px 0;
 }
 
-#modal {
+.modal {
   width: 100%;
   height: 100%;
   visibility: hidden;
 }
 
-#modal.activeModal {
+.modal.activeModal {
   visibility: visible;
 }
 
-#modal-Katrine,
-#modal-Jennifer,
-#modal-Woody,
-#modal-Sophia,
-#modal-Timmy,
-#modal-Charly,
-#modal-Scarlett,
-#modal-Freddie {
+.modal-Katrine,
+.modal-Jennifer,
+.modal-Woody,
+.modal-Sophia,
+.modal-Timmy,
+.modal-Charly,
+.modal-Scarlett,
+.modal-Freddie {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -648,14 +648,14 @@ h4 {
   display: flex;
   justify-content: space-between;
 }
-#modal-Katrine .imgPets,
-#modal-Jennifer .imgPets,
-#modal-Woody .imgPets,
-#modal-Sophia .imgPets,
-#modal-Timmy .imgPets,
-#modal-Charly .imgPets,
-#modal-Scarlett .imgPets,
-#modal-Freddie .imgPets {
+.modal-Katrine .imgPets,
+.modal-Jennifer .imgPets,
+.modal-Woody .imgPets,
+.modal-Sophia .imgPets,
+.modal-Timmy .imgPets,
+.modal-Charly .imgPets,
+.modal-Scarlett .imgPets,
+.modal-Freddie .imgPets {
   border-radius: 9px 0px 0px 9px;
 }
 
@@ -678,42 +678,42 @@ h4 {
   background: #FDDCC4;
 }
 
-#modal-Katrine.modal-pets {
+.modal-Katrine.modal-pets {
   visibility: visible;
   opacity: 1;
 }
 
-#modal-Jennifer.modal-pets {
+.modal-Jennifer.modal-pets {
   visibility: visible;
   opacity: 1;
 }
 
-#modal-Woody.modal-pets {
+.modal-Woody.modal-pets {
   visibility: visible;
   opacity: 1;
 }
 
-#modal-Sophia.modal-pets {
+.modal-Sophia.modal-pets {
   visibility: visible;
   opacity: 1;
 }
 
-#modal-Timmy.modal-pets {
+.modal-Timmy.modal-pets {
   visibility: visible;
   opacity: 1;
 }
 
-#modal-Charly.modal-pets {
+.modal-Charly.modal-pets {
   visibility: visible;
   opacity: 1;
 }
 
-#modal-Scarlett.modal-pets {
+.modal-Scarlett.modal-pets {
   visibility: visible;
   opacity: 1;
 }
 
-#modal-Freddie.modal-pets {
+.modal-Freddie.modal-pets {
   visibility: visible;
   opacity: 1;
 }
@@ -933,14 +933,14 @@ h4 {
     padding-right: 20px;
   }
 
-  #modal-Katrine,
-#modal-Jennifer,
-#modal-Woody,
-#modal-Sophia,
-#modal-Timmy,
-#modal-Charly,
-#modal-Scarlett,
-#modal-Freddie {
+  .modal-Katrine,
+.modal-Jennifer,
+.modal-Woody,
+.modal-Sophia,
+.modal-Timmy,
+.modal-Charly,
+.modal-Scarlett,
+.modal-Freddie {
     width: 630px;
     height: 350px;
   }
@@ -965,14 +965,14 @@ h4 {
     margin-bottom: 0px;
   }
 
-  #close-Katrine,
-#close-Jennifer,
-#close-Woody,
-#close-Sophia,
-#close-Timmy,
-#close-Charly,
-#close-Scarlett,
-#close-Freddie {
+  .close-Katrine,
+.close-Jennifer,
+.close-Woody,
+.close-Sophia,
+.close-Timmy,
+.close-Charly,
+.close-Scarlett,
+.close-Freddie {
     right: -43px;
   }
 }
@@ -1225,36 +1225,36 @@ h4 {
     display: none;
   }
 
-  #modal-Katrine,
-#modal-Jennifer,
-#modal-Woody,
-#modal-Sophia,
-#modal-Timmy,
-#modal-Charly,
-#modal-Scarlett,
-#modal-Freddie {
+  .modal-Katrine,
+.modal-Jennifer,
+.modal-Woody,
+.modal-Sophia,
+.modal-Timmy,
+.modal-Charly,
+.modal-Scarlett,
+.modal-Freddie {
     width: 240px;
     height: auto;
   }
-  #modal-Katrine .imgPets,
-#modal-Jennifer .imgPets,
-#modal-Woody .imgPets,
-#modal-Sophia .imgPets,
-#modal-Timmy .imgPets,
-#modal-Charly .imgPets,
-#modal-Scarlett .imgPets,
-#modal-Freddie .imgPets {
+  .modal-Katrine .imgPets,
+.modal-Jennifer .imgPets,
+.modal-Woody .imgPets,
+.modal-Sophia .imgPets,
+.modal-Timmy .imgPets,
+.modal-Charly .imgPets,
+.modal-Scarlett .imgPets,
+.modal-Freddie .imgPets {
     display: none;
   }
 
-  #close-Katrine,
-#close-Jennifer,
-#close-Woody,
-#close-Sophia,
-#close-Timmy,
-#close-Charly,
-#close-Scarlett,
-#close-Freddie {
+  .close-Katrine,
+.close-Jennifer,
+.close-Woody,
+.close-Sophia,
+.close-Timmy,
+.close-Charly,
+.close-Scarlett,
+.close-Freddie {
     right: -29px;
   }
 

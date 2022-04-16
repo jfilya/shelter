@@ -603,23 +603,23 @@ h4 {
   padding: 60px 0;
 }
 //модальные окна
-#modal {
+.modal {
   width: 100%;
   height: 100%;
   visibility: hidden;
 }
-#modal.activeModal {
+.modal.activeModal {
   visibility: visible;
 }
 
-#modal-Katrine,
-#modal-Jennifer,
-#modal-Woody,
-#modal-Sophia,
-#modal-Timmy,
-#modal-Charly,
-#modal-Scarlett,
-#modal-Freddie {
+.modal-Katrine,
+.modal-Jennifer,
+.modal-Woody,
+.modal-Sophia,
+.modal-Timmy,
+.modal-Charly,
+.modal-Scarlett,
+.modal-Freddie {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -660,35 +660,35 @@ h4 {
     background: #FDDCC4;
   }
 }
-#modal-Katrine.modal-pets {
+.modal-Katrine.modal-pets {
   visibility: visible;
   opacity:1;
 }
-#modal-Jennifer.modal-pets {
+.modal-Jennifer.modal-pets {
   visibility: visible;
   opacity:1;
 }
-#modal-Woody.modal-pets {
+.modal-Woody.modal-pets {
   visibility: visible;
   opacity:1;
 }
-#modal-Sophia.modal-pets {
+.modal-Sophia.modal-pets {
   visibility: visible;
   opacity:1;
 }
-#modal-Timmy.modal-pets {
+.modal-Timmy.modal-pets {
   visibility: visible;
   opacity:1;
 }
-#modal-Charly.modal-pets {
+.modal-Charly.modal-pets {
   visibility: visible;
   opacity:1;
 }
-#modal-Scarlett.modal-pets {
+.modal-Scarlett.modal-pets {
   visibility: visible;
   opacity:1;
 }
-#modal-Freddie.modal-pets {
+.modal-Freddie.modal-pets {
   visibility: visible;
   opacity:1;
 }
@@ -896,14 +896,14 @@ animation: showBlock 0.5s linear forwards;
     padding-right: 20px;
   }
   // адаптив модальных окон
-  #modal-Katrine,
-  #modal-Jennifer,
-  #modal-Woody,
-  #modal-Sophia,
-  #modal-Timmy,
-  #modal-Charly,
-  #modal-Scarlett,
-  #modal-Freddie{
+  .modal-Katrine,
+  .modal-Jennifer,
+  .modal-Woody,
+  .modal-Sophia,
+  .modal-Timmy,
+  .modal-Charly,
+  .modal-Scarlett,
+  .modal-Freddie{
     width: 630px;
     height: 350px;
   }
@@ -928,14 +928,14 @@ animation: showBlock 0.5s linear forwards;
       }
     }
   }
-  #close-Katrine,
-  #close-Jennifer,
-  #close-Woody,
-  #close-Sophia,
-  #close-Timmy,
-  #close-Charly,
-  #close-Scarlett,
-  #close-Freddie{
+  .close-Katrine,
+  .close-Jennifer,
+  .close-Woody,
+  .close-Sophia,
+  .close-Timmy,
+  .close-Charly,
+  .close-Scarlett,
+  .close-Freddie{
     right: -43px;
   }
 }
@@ -1186,28 +1186,28 @@ animation: showBlock 0.5s linear forwards;
     }
   }
   // адаптив модальных окон
-  #modal-Katrine,
-  #modal-Jennifer,
-  #modal-Woody,
-  #modal-Sophia,
-  #modal-Timmy,
-  #modal-Charly,
-  #modal-Scarlett,
-  #modal-Freddie{
+  .modal-Katrine,
+  .modal-Jennifer,
+  .modal-Woody,
+  .modal-Sophia,
+  .modal-Timmy,
+  .modal-Charly,
+  .modal-Scarlett,
+  .modal-Freddie{
     width: 240px;
     height: auto;
     .imgPets{
       display: none;
     }
   }
-  #close-Katrine, 
-  #close-Jennifer, 
-  #close-Woody, 
-  #close-Sophia, 
-  #close-Timmy, 
-  #close-Charly, 
-  #close-Scarlett, 
-  #close-Freddie {
+  .close-Katrine, 
+  .close-Jennifer, 
+  .close-Woody, 
+  .close-Sophia, 
+  .close-Timmy, 
+  .close-Charly, 
+  .close-Scarlett, 
+  .close-Freddie {
     right: -29px;
 }
   .content{

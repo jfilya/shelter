@@ -635,28 +635,42 @@ function showPage(item) {
     let end = start + notesOnPage;
     let notesing = petsPagination.slice(start, end);
 
+    const modals = document.querySelector('.modal');
+    const overlays = document.querySelector('.overlay');
+
     tablePagination.innerHTML='';
     for (let note of notesing) {
-        let div = document.createElement('div');
-        tablePagination.appendChild(div);
-        div.className = "pets__pet petsPets__card"
-        div.id=`btn-${note.name}`;  
-        
-        let image = document.createElement('img');
-        image.src= note.img;
-        image.alt=`pets-${note.name}`
-        div.appendChild(image);
-        image.className = "pets__pet__image"
+      let tr = document.createElement('div');
+      table.appendChild(tr);
+      tr.className = `pets__pet petsPets__card  btn-${note.name}`
+      tr.addEventListener('click', () => {
+        overlays.classList.add('activeOverlay');
+        modals.classList.add('activeModal');
+        document.querySelector(`.modal-${note.name}`).classList.add('modal-pets');
+      });
+      
+      const closeModels = () => {
+        overlays.classList.remove('activeOverlay');
+        document.querySelector(`.modal-${note.name}`).classList.remove('modal-pets');
+      };
+      overlays.addEventListener('click', closeModels);
 
-        let title = document.createElement('h5');   
-        title.innerHTML= note.name;
-        div.appendChild(title);
-        title.className = "pets__pet__title";
 
-        let btns = document.createElement('div');   
-        btns.innerHTML= 'Learn more';
-        div.appendChild(btns);
-        btns.className = "btn btnLearn";
+      let img = document.createElement('img');
+      img.src= note.img;
+      tr.appendChild(img);
+      img.className = "pets__pet__image"
+
+      let h = document.createElement('h5');   
+      h.innerHTML= note.name;
+      tr.appendChild(h);
+      h.className = "pets__pet__title";
+
+      let btn = document.createElement('div');   
+      btn.innerHTML= 'Learn more';
+      tr.appendChild(btn);
+      btn.className = `btn btnLearn`;  
+
         
     }    
 }
