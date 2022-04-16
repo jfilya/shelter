@@ -92,6 +92,10 @@ let pets = [
 
 let base = document.querySelector('#base');
 let notes = pets.slice();
+
+const modalsMain = document.querySelector('.modal');
+const overlaysMain = document.querySelector('.overlay');
+
 for (let note of notes) {
   let item = document.createElement('div');
   base.appendChild(item);
@@ -99,8 +103,18 @@ for (let note of notes) {
   
   let tr = document.createElement('div');
   item.appendChild(tr);
-  tr.className = "pets__pet pets__item"
-  tr.id=`btn-${note.name}`;
+  tr.className = `pets__pet pets__item btn-${note.name}`
+  tr.addEventListener('click', () => {
+    overlaysMain.classList.add('activeOverlay');
+    modalsMain.classList.add('activeModal');
+    document.querySelector(`.modal-${note.name}`).classList.add('modal-pets');
+  });
+
+  const closeModels = () => {
+    overlaysMain.classList.remove('activeOverlay');
+    document.querySelector(`.modal-${note.name}`).classList.remove('modal-pets');
+  };
+  overlaysMain.addEventListener('click', closeModels);
 
   let img = document.createElement('img');
   img.src= note.img;
