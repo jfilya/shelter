@@ -96,11 +96,11 @@ for (let note of notes) {
   let item = document.createElement('div');
   base.appendChild(item);
   item.className = "item"
-  item.id=`btn-${note.name}`;  
-
+  
   let tr = document.createElement('div');
   item.appendChild(tr);
   tr.className = "pets__pet pets__item"
+  tr.id=`btn-${note.name}`;
 
   let img = document.createElement('img');
   img.src= note.img;
@@ -117,5 +117,6 @@ for (let note of notes) {
   btn.innerHTML= 'Learn more';
   tr.appendChild(btn);
   btn.className = "btn btnLearn pets__pet__btn ";
+  
 
 }
