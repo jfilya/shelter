@@ -640,9 +640,11 @@ function showPage(item) {
         let div = document.createElement('div');
         tablePagination.appendChild(div);
         div.className = "pets__pet petsPets__card"
-
+        div.id=`btn-${note.name}`;  
+        
         let image = document.createElement('img');
         image.src= note.img;
+        image.alt=`pets-${note.name}`
         div.appendChild(image);
         image.className = "pets__pet__image"
 
@@ -655,7 +657,7 @@ function showPage(item) {
         btns.innerHTML= 'Learn more';
         div.appendChild(btns);
         btns.className = "btn btnLearn";
-        btns.id=`btn-${note.name}`;  
+        
     }    
 }
 
