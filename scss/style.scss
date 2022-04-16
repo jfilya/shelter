@@ -353,10 +353,6 @@ h5 {
   border: 2px solid #f1cdb3;
   background: transparent;
   cursor:pointer;
-  &:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
 }
 .help {
   padding-top: 80px;
