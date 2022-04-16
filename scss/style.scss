@@ -960,7 +960,7 @@ animation: showBlock 0.5s linear forwards;
     transform: rotate(-90deg);
     position: sticky;
   }
-  .burgerMenuMain{
+  .burgerMenuMain.transform{
     position: fixed;
   }
   .navigationMain {
