@@ -34,9 +34,7 @@
   font-weight: 700;
   font-style: normal;
 }
-html {
-  overflow-x: hidden;
-}
+
 * {
   box-sizing: border-box;
   text-size-adjust: none;
@@ -497,7 +495,7 @@ h4 {
 }
 .headerPets {
   padding: 30px 0 31px 0;
-  position: fixed;
+  position: sticky;
   top: 0;
   background: #fff;
   z-index: 3;
@@ -601,9 +599,10 @@ h4 {
 
 .logoMenu {
   opacity: 0;
-  right: -10px;
+  right: 0%;
   position: absolute;
   z-index: 5;
+  padding-left: 10px;
 }
 
 //модальные окна
@@ -990,7 +989,7 @@ h4 {
     transition: 0.5s;
     &__list {
       margin-right: 0px;
-      margin-bottom: 39px;
+      margin-bottom: 38px;
       &:last-child {
         margin-bottom: 0px;
       }
@@ -1077,6 +1076,11 @@ h4 {
   }
   .ourFriends {
     padding: 41px 0 43px 0;
+    &__wrapper{
+      &__title{
+      width: 300px;
+      }  
+    }
   }
   .arrows {
     display: grid;
