@@ -549,10 +549,10 @@ let notesOnPage;
 go();
 
 window.addEventListener("resize", go);
-let i=0;
+
 function go() { 
     let items = document.querySelectorAll('#pagination li')
-    
+    let i=0;
     let maxI;
     btnPrev.classList.add('disableBtn');
     btnDown.classList.add('disableBtn'); 
