@@ -166,7 +166,7 @@ button {
   transition: 0.3s;
 }
 .navigationMain__list__link:hover {
-  color: #FAFAFA;
+  color: #fafafa;
 }
 .navigationMain__list__link:hover::after {
   opacity: 1;
@@ -478,7 +478,7 @@ h5 {
   transition: 0.2s;
 }
 .footer__wrapper__contact-contacts:hover {
-  color: #FDDCC4;
+  color: #fddcc4;
 }
 .footer__wrapper__contact-contacts img {
   margin-right: 20px;
@@ -586,23 +586,28 @@ h4 {
   fill: #cdcdcd;
 }
 
-.petsMain {
-  width: 1080px;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
 .disable {
   pointer-events: none;
+}
+
+.base {
+  height: 554px;
+  width: 1080px;
+  position: relative;
+  padding: 60px 0;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .item {
   padding-left: 45px;
   padding-right: 45px;
-}
-
-.tns-nav, .tns-liveregion {
-  display: none;
+  width: 100%;
+  width: calc(100% / var(--slidesPerScreen));
+  position: absolute;
+  flex-shrink: 0;
+  background: #f6f6f6;
+  transition: 0.2s;
 }
 
 .logoMenu {
@@ -610,11 +615,6 @@ h4 {
   right: -10px;
   position: absolute;
   z-index: 5;
-}
-
-.base {
-  display: inline-flex;
-  padding: 60px 0;
 }
 
 .modal {
@@ -643,7 +643,7 @@ h4 {
   background-color: #ffffff;
   width: 900px;
   height: 500px;
-  background: #FAFAFA;
+  background: #fafafa;
   border-radius: 9px;
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   visibility: hidden;
@@ -670,7 +670,7 @@ h4 {
   width: 52px;
   height: 52px;
   border-radius: 100px;
-  border: 2px solid #F1CDB3;
+  border: 2px solid #f1cdb3;
   transition: 0.2s;
   background: transparent;
 }
@@ -678,8 +678,8 @@ h4 {
   padding-top: 4px;
 }
 .closeModalBtn:hover {
-  border: 2px solid #FDDCC4;
-  background: #FDDCC4;
+  border: 2px solid #fddcc4;
+  background: #fddcc4;
 }
 
 .modal-Katrine.modal-pets {
@@ -764,7 +764,7 @@ h4 {
 }
 .content__list li::before {
   content: "";
-  background: #F1CDB3;
+  background: #f1cdb3;
   width: 4px;
   height: 4px;
   border-radius: 100%;
@@ -783,8 +783,8 @@ h4 {
 
 .activeNum {
   display: block;
-  -webkit-animation: showBlock 1s linear forwards;
-          animation: showBlock 1s linear forwards;
+  -webkit-animation: showBlock 0.5s linear forwards;
+          animation: showBlock 0.5s linear forwards;
 }
 
 .petsPets__card {
@@ -820,7 +820,15 @@ h4 {
     opacity: 1;
   }
 }
+:root {
+  --slidesPerScreen: 3;
+}
+
 @media screen and (max-width: 1279px) {
+  :root {
+    --slidesPerScreen: 2;
+  }
+
   .container {
     padding: 0 30px;
   }
@@ -865,7 +873,7 @@ h4 {
     left: 30px;
   }
 
-  .petsMain {
+  .base {
     width: 620px;
   }
 
@@ -982,6 +990,10 @@ h4 {
   }
 }
 @media screen and (max-width: 767px) {
+  :root {
+    --slidesPerScreen: 1;
+  }
+
   .container {
     padding: 0 10px;
   }
@@ -1096,8 +1108,9 @@ h4 {
     text-align: center;
   }
 
-  .petsMain {
+  .base {
     width: 300px;
+    height: 495px;
   }
 
   .pets {

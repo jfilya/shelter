@@ -235,68 +235,6 @@
     <script src="js/menu.js"></script> 
     <script src="js/pets.js"></script>  
     <script src="js/pets-modal.js"></script>
-    <script src="js/tiny-slider.js"></script>
-    <script src="js/tiny.js"></script>
-    <script>
-      var options = {
-        base: {
-          container: "",
-          slideBy: "page",
-          mouseDrag: true,
-          pagination: false,
-          prevButton: ".prev",
-          nextButton: ".next",
-          responsive: {
-            0: {
-              items: 1,
-            },
-            768: { 
-              items: 2,
-            },
-            1280: {
-              items: 3,
-            },
-          },
-        },
-      };
-      for (var i in options) {
-        var item = options[i];
-        item.container = "#" + i;
-        item.swipeAngle = false;
-        if (!item.speed) {
-          item.speed = speed;
-        }
-
-        if (doc.querySelector(item.container)) {
-          sliders[i] = tns(options[i]);
-
-          // call test functions
-          if (isTestPage && initFns[i]) {
-            initFns[i]();
-          }
-         
-
-          // test responsive pages
-        } else if (i.indexOf("responsive") >= 0) {
-          if (isTestPage && initFns[i]) {
-            initFns[i]();
-          }
-        }
-        // goto
-        if (doc.querySelector("#base_wrapper")) {
-          var goto = doc.querySelector("#base_wrapper .goto-controls"),
-            gotoBtn = goto.querySelector(".button"),
-            gotoInput = goto.querySelector("input");
-
-          gotoBtn.onclick = function (event) {
-            var index = gotoInput.value;
-            sliders["base"].goTo(index);
-          };
-        }
-      }
-
-
-    </script>
-
+    <script src="js/slider.js"></script>
   </body>
 </html>

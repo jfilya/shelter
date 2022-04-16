@@ -34,7 +34,7 @@
   font-weight: 700;
   font-style: normal;
 }
-html{
+html {
   overflow-x: hidden;
 }
 * {
@@ -112,7 +112,7 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition:0.5s;
+    transition: 0.5s;
   }
 }
 .logoMain {
@@ -160,7 +160,7 @@ button {
         transition: 0.3s;
       }
       &:hover {
-        color: #FAFAFA;
+        color: #fafafa;
         &::after {
           opacity: 1;
           width: 100%;
@@ -194,7 +194,7 @@ button {
   top: 0;
   left: 0;
   background: rgba(41, 41, 41, 0.6);
-  cursor:pointer;
+  cursor: pointer;
 }
 .activeOverlay {
   width: 100vw;
@@ -299,9 +299,9 @@ h3 {
     background: transparent;
     transition: 0.5s;
     &:hover {
-      svg{
+      svg {
         fill: #f1cdb3;
-      } 
+      }
     }
   }
   &__left {
@@ -354,7 +354,7 @@ h5 {
   padding: 13px 43px 13px 43px;
   border: 2px solid #f1cdb3;
   background: transparent;
-  cursor:pointer;
+  cursor: pointer;
 }
 .help {
   padding-top: 80px;
@@ -371,7 +371,7 @@ h5 {
 .icons {
   display: flex;
   justify-content: center;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   row-gap: 55px;
   column-gap: 120px;
   &__icon {
@@ -414,10 +414,10 @@ h5 {
         display: inline-flex;
         align-items: center;
         margin-bottom: 20px;
-        transition:.2s;
-        &:hover{
-          background:#fddcc4;
-          transform:scale(1.01);
+        transition: 0.2s;
+        &:hover {
+          background: #fddcc4;
+          transform: scale(1.01);
         }
         svg {
           margin-right: 10px;
@@ -463,9 +463,9 @@ h5 {
         line-height: 23px;
         letter-spacing: 0.06em;
         color: #f1cdb3;
-        transition: .2s;
-        &:hover{
-          color:#FDDCC4;
+        transition: 0.2s;
+        &:hover {
+          color: #fddcc4;
         }
         img {
           margin-right: 20px;
@@ -504,7 +504,7 @@ h4 {
   width: 100%;
 }
 .logoPets {
-    pointer-events:all;
+  pointer-events: all;
   &__title {
     color: #545454;
     line-height: 36px;
@@ -521,7 +521,7 @@ h4 {
     }
     &__link {
       color: #545454;
-      &:hover{
+      &:hover {
         color: #292929;
       }
     }
@@ -567,7 +567,7 @@ h4 {
 .disableBtn {
   border: 2px solid #cdcdcd;
   background: transparent;
-  color:#cdcdcd;
+  color: #cdcdcd;
   svg {
     path {
       fill: #cdcdcd;
@@ -575,36 +575,37 @@ h4 {
   }
   cursor: default;
 }
-.petsMain{
-  width: 1080px;
-  overflow: hidden;
-  margin: 0 auto;
-}
-.disable{
+
+.disable {
   pointer-events: none;
 }
 
-
-
-
-
-.item{
+.base {
+  height: 554px;
+  width: 1080px;
+  position: relative;
+  padding: 60px 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.item {
   padding-left: 45px;
   padding-right: 45px;
+  width: 100%;
+  width: calc(100% / var(--slidesPerScreen));
+  position: absolute;
+  flex-shrink: 0;
+  background: #f6f6f6;
+  transition: 0.2s;
 }
-.tns-nav, .tns-liveregion {
-  display: none;
-}
-.logoMenu{
-  opacity:0;
+
+.logoMenu {
+  opacity: 0;
   right: -10px;
   position: absolute;
   z-index: 5;
 }
-.base{
-  display: inline-flex;
-  padding: 60px 0;
-}
+
 //модальные окна
 .modal {
   width: 100%;
@@ -631,86 +632,85 @@ h4 {
   background-color: #ffffff;
   width: 900px;
   height: 500px;
-  background: #FAFAFA;
+  background: #fafafa;
   border-radius: 9px;
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   visibility: hidden;
-  opacity:0;
-  transition: .5s;
+  opacity: 0;
+  transition: 0.5s;
   display: flex;
   justify-content: space-between;
 
-
-  .imgPets{
+  .imgPets {
     border-radius: 9px 0px 0px 9px;
   }
 }
-.closeModalBtn{
+.closeModalBtn {
   position: fixed;
   right: -41px;
   top: -52px;
   width: 52px;
   height: 52px;
   border-radius: 100px;
-  border: 2px solid #F1CDB3;
+  border: 2px solid #f1cdb3;
   transition: 0.2s;
   background: transparent;
-  img{
+  img {
     padding-top: 4px;
   }
-  &:hover{
-    border: 2px solid #FDDCC4;
-    background: #FDDCC4;
+  &:hover {
+    border: 2px solid #fddcc4;
+    background: #fddcc4;
   }
 }
 .modal-Katrine.modal-pets {
   visibility: visible;
-  opacity:1;
+  opacity: 1;
 }
 .modal-Jennifer.modal-pets {
   visibility: visible;
-  opacity:1;
+  opacity: 1;
 }
 .modal-Woody.modal-pets {
   visibility: visible;
-  opacity:1;
+  opacity: 1;
 }
 .modal-Sophia.modal-pets {
   visibility: visible;
-  opacity:1;
+  opacity: 1;
 }
 .modal-Timmy.modal-pets {
   visibility: visible;
-  opacity:1;
+  opacity: 1;
 }
 .modal-Charly.modal-pets {
   visibility: visible;
-  opacity:1;
+  opacity: 1;
 }
 .modal-Scarlett.modal-pets {
   visibility: visible;
-  opacity:1;
+  opacity: 1;
 }
 .modal-Freddie.modal-pets {
   visibility: visible;
-  opacity:1;
+  opacity: 1;
 }
 
-.content{
+.content {
   padding-top: 50px;
   padding-right: 20px;
- 
-  &__title{
+
+  &__title {
     margin-bottom: 10px;
     color: #000000;
-    word-wrap:break-word;
+    word-wrap: break-word;
   }
-  &__titleMini{
+  &__titleMini {
     margin-bottom: 40px;
     color: #000000;
   }
-  &__info{
-    font-family: 'Georgia';
+  &__info {
+    font-family: "Georgia";
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -720,57 +720,57 @@ h4 {
     color: #000000;
     margin-bottom: 40px;
   }
-  &__list{
-    li{
+  &__list {
+    li {
       padding-left: 14px;
       margin-bottom: 11px;
       position: relative;
-      font-family: 'GeorgiaBold';
+      font-family: "GeorgiaBold";
       font-size: 15px;
       line-height: 17px;
       letter-spacing: 0.06em;
       color: #000000;
-      span{
-        font-family: 'GeorgiaRegular';
+      span {
+        font-family: "GeorgiaRegular";
       }
-      &:last-child{
+      &:last-child {
         margin-bottom: 0px;
       }
-      &::before{
-        content:'';
-        background: #F1CDB3;
+      &::before {
+        content: "";
+        background: #f1cdb3;
         width: 4px;
         height: 4px;
         border-radius: 100%;
         position: absolute;
-        top:7px;
-        left:0%;
+        top: 7px;
+        left: 0%;
       }
     }
   }
 }
-#pagination{
+#pagination {
   display: flex;
 }
-.num{
+.num {
   display: none;
 }
-.activeNum{
-display: block;
-animation: showBlock 1s linear forwards;
+.activeNum {
+  display: block;
+  animation: showBlock 0.5s linear forwards;
 }
 
-.petsPets__card{
-animation: showBlock 0.5s linear forwards;
+.petsPets__card {
+  animation: showBlock 0.5s linear forwards;
 }
 .disableBtn {
-border: 2px solid #cdcdcd;
-background: transparent;
-color: #cdcdcd;
-cursor: default;
-/* новенькое */
-pointer-events: none;
-animation: showBlock 0.5s linear forwards;
+  border: 2px solid #cdcdcd;
+  background: transparent;
+  color: #cdcdcd;
+  cursor: default;
+  /* новенькое */
+  pointer-events: none;
+  animation: showBlock 0.5s linear forwards;
 }
 
 @keyframes showBlock {
@@ -782,8 +782,15 @@ animation: showBlock 0.5s linear forwards;
   }
 }
 
+:root {
+  --slidesPerScreen: 3;
+}
+
 // адаптив
 @media screen and (max-width: 1279px) {
+  :root {
+    --slidesPerScreen: 2;
+  }
   .container {
     padding: 0 30px;
   }
@@ -791,7 +798,7 @@ animation: showBlock 0.5s linear forwards;
     padding-top: 31px;
     padding-bottom: 60px;
   }
-  .headerPets{
+  .headerPets {
     padding-bottom: 30px;
   }
   .notOnly {
@@ -828,7 +835,7 @@ animation: showBlock 0.5s linear forwards;
       left: 30px;
     }
   }
-  .petsMain{
+  .base {
     width: 620px;
   }
   .pets {
@@ -878,11 +885,11 @@ animation: showBlock 0.5s linear forwards;
     padding-top: 30px;
     grid-row-gap: 32px;
     padding-bottom: 41px;
-    &__card{
-      &:nth-child(7){
+    &__card {
+      &:nth-child(7) {
         display: none;
       }
-      &:nth-child(8){
+      &:nth-child(8) {
         display: none;
       }
     }
@@ -890,15 +897,15 @@ animation: showBlock 0.5s linear forwards;
   .ourPets {
     padding-bottom: 77px;
   }
-  .logoMenu.activeMenu{
-    opacity:1;
+  .logoMenu.activeMenu {
+    opacity: 1;
     position: fixed;
-    top:30px;
+    top: 30px;
   }
   // .logoPets.activeMenu{
   //   position: absolute;
   // }
-  .item{
+  .item {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -910,26 +917,26 @@ animation: showBlock 0.5s linear forwards;
   .modal-Timmy,
   .modal-Charly,
   .modal-Scarlett,
-  .modal-Freddie{
+  .modal-Freddie {
     width: 630px;
     height: 350px;
   }
-  .content{
-    padding-top:10px;
+  .content {
+    padding-top: 10px;
     padding-right: 9px;
-    &__titleMini{
+    &__titleMini {
       margin-bottom: 20px;
     }
-    &__info{
+    &__info {
       font-size: 13px;
       line-height: 14px;
       margin-bottom: 20px;
       max-width: 261px;
     }
-    &__list{
-      li{
+    &__list {
+      li {
         margin-bottom: 6px;
-        &:last-child{
+        &:last-child {
           margin-bottom: 0px;
         }
       }
@@ -942,12 +949,15 @@ animation: showBlock 0.5s linear forwards;
   .close-Timmy,
   .close-Charly,
   .close-Scarlett,
-  .close-Freddie{
+  .close-Freddie {
     right: -43px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  :root {
+    --slidesPerScreen: 1;
+  }
   .container {
     padding: 0 10px;
   }
@@ -963,7 +973,7 @@ animation: showBlock 0.5s linear forwards;
     transform: rotate(-90deg);
     position: sticky;
   }
-  .burgerMenuMain.transform{
+  .burgerMenuMain.transform {
     position: fixed;
   }
   .navigationMain {
@@ -1056,8 +1066,9 @@ animation: showBlock 0.5s linear forwards;
     line-height: 32px;
     text-align: center;
   }
-  .petsMain{
+  .base {
     width: 300px;
+    height: 495px;
   }
   .pets {
     grid-column-gap: 0px;
@@ -1183,14 +1194,14 @@ animation: showBlock 0.5s linear forwards;
   .petsPets {
     grid-template-columns: 270px;
     padding-bottom: 43px;
-    &__card{
-      &:nth-child(4){
+    &__card {
+      &:nth-child(4) {
         display: none;
       }
-      &:nth-child(5){
+      &:nth-child(5) {
         display: none;
       }
-      &:nth-child(6){
+      &:nth-child(6) {
         display: none;
       }
     }
@@ -1203,41 +1214,40 @@ animation: showBlock 0.5s linear forwards;
   .modal-Timmy,
   .modal-Charly,
   .modal-Scarlett,
-  .modal-Freddie{
+  .modal-Freddie {
     width: 240px;
     height: auto;
-    .imgPets{
+    .imgPets {
       display: none;
     }
   }
-  .close-Katrine, 
-  .close-Jennifer, 
-  .close-Woody, 
-  .close-Sophia, 
-  .close-Timmy, 
-  .close-Charly, 
-  .close-Scarlett, 
+  .close-Katrine,
+  .close-Jennifer,
+  .close-Woody,
+  .close-Sophia,
+  .close-Timmy,
+  .close-Charly,
+  .close-Scarlett,
   .close-Freddie {
     right: -29px;
-}
-  .content{
-    padding:10px;
-    &__title{
+  }
+  .content {
+    padding: 10px;
+    &__title {
       font-size: 35px;
       line-height: 45px;
       letter-spacing: 0.06em;
     }
-    &__titleMini{
+    &__titleMini {
       text-align: center;
     }
-    &__info{
+    &__info {
       text-align: justify;
       max-width: 220px;
       margin-bottom: 24px;
     }
   }
-  .item{
-    padding:0 15px;
+  .item {
+    padding: 0 15px;
   }
 }
-
