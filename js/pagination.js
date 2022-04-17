@@ -610,15 +610,12 @@ function go() {
     
   if (window.innerWidth >= 1280) {      
      notesOnPage = 8; 
-
   } 
   if (window.innerWidth >= 768 && window.innerWidth < 1280) {  
     notesOnPage = 6;
-
   }
    if (window.innerWidth >= 320 && window.innerWidth < 768) {
     notesOnPage = 3;
-
   }
   maxI= Math.floor((petsPagination.length-1) / notesOnPage);
 
