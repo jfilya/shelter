@@ -606,20 +606,21 @@ function go() {
         btnPrev.classList.remove('disableBtn');
         btnDown.classList.remove('disableBtn');
     }) 
- 
+
+    
   if (window.innerWidth >= 1280) {      
      notesOnPage = 8; 
-     maxI=5;
+
   } 
   if (window.innerWidth >= 768 && window.innerWidth < 1280) {  
     notesOnPage = 6;
-    maxI=7;
+
   }
    if (window.innerWidth >= 320 && window.innerWidth < 768) {
     notesOnPage = 3;
-    maxI=15; 
-  }
 
+  }
+  maxI= Math.floor((petsPagination.length-1) / notesOnPage);
 
 showPage(items[0]);   
 }
