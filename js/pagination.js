@@ -1,6 +1,6 @@
 let p1 = pets.slice(0,4);
 let p2 = pets.slice(4);
-console.log(p1,p2);
+
 let petsPagination  = [];
 function mixarr(arr){
   return arr.map(i=>[Math.random(), i]).sort().map(i=>i[1])
