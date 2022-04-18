@@ -1,5 +1,3 @@
-
-console.log(pets);
 let p1 = pets.slice(0,4);
 let p2 = pets.slice(4);
 console.log(p1,p2);
