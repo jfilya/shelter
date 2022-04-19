@@ -784,6 +784,9 @@ h4 {
   --slidesPerScreen: 3;
 }
 
+.scroll{
+  overflow-y: hidden;
+}
 // адаптив
 @media screen and (max-width: 1279px) {
   :root {

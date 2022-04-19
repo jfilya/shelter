@@ -11,6 +11,7 @@ btnOpen.addEventListener('click', () => {
     btnOpen.classList.toggle('transform');
     overlay.classList.toggle('activeOverlay');
     logo.classList.toggle('activeMenu');
+    document.querySelector('body').classList.toggle('scroll');
 });
 
 const closeModel = () => {
@@ -18,6 +19,7 @@ const closeModel = () => {
     overlay.classList.remove('activeOverlay');
     btnOpen.classList.remove('transform');
     logo.classList.remove('activeMenu');
+    document.querySelector('body').classList.remove('scroll');
 };
 
 overlay.addEventListener('click', closeModel);

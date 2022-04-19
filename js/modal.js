@@ -21,6 +21,7 @@ for (let mod of modaling) {
     overlays.classList.remove('activeOverlay');
     modals.classList.remove('activeModal');
     block.classList.remove('modal-pets');
+    document.querySelector('body').classList.remove('scroll');
   })
 
 
