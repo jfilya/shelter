@@ -12,7 +12,7 @@ let notes  = [];
 function mix(arr){
   return arr.map(i=>[Math.random(), i]).sort().map(i=>i[1])
 }
-notes.push(...pets, ...mix(notes1), ...mix(notes2), ...mix(notes1), ...mix(notes2), ...mix(notes1),...mix(notes2))
+notes.push(...mix(notes1), ...mix(notes2), ...mix(notes1), ...mix(notes2), ...mix(notes1),...mix(notes2))
 
 
 for (let note of notes) {
