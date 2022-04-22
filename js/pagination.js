@@ -5,10 +5,6 @@ let petsPagination  = [];
 function mixarr(arr){
   return arr.map(i=>[Math.random(), i]).sort().map(i=>i[1])
 }
-petsPagination.push(...mixarr(p1), ...mixarr(p2), ...mixarr(p1), ...mixarr(p2), ...mixarr(p1), ...mixarr(p2), ...mixarr(p1),...mixarr(p2), ...mixarr(p1), ...mixarr(p2), ...mixarr(p1), ...mixarr(p2))
-
-
-
 
   let btnPrev= document.querySelector('#arrowPrev');
   let btnUp = document.querySelector('#arrowUp')
@@ -84,12 +80,18 @@ function go() {
     
   if (window.innerWidth >= 1280) {      
      notesOnPage = 8; 
+     petsPagination.splice(0,petsPagination.length);   
+     petsPagination.push(...mixarr(pets), ...mixarr(pets), ...mixarr(pets), ...mixarr(pets), ...mixarr(pets), ...mixarr(pets))
   } 
   if (window.innerWidth >= 768 && window.innerWidth < 1280) {  
     notesOnPage = 6;
+    petsPagination.splice(0,petsPagination.length);
+    petsPagination.push(...mixarr(p1), ...mixarr(p2),...mixarr(p1), ...mixarr(p2), ...mixarr(p1), ...mixarr(p2),...mixarr(p1), ...mixarr(p2),...mixarr(p1), ...mixarr(p2),...mixarr(p1), ...mixarr(p2))
   }
    if (window.innerWidth >= 320 && window.innerWidth < 768) {
     notesOnPage = 3;
+        petsPagination.splice(0,petsPagination.length);
+    petsPagination.push(...mixarr(p1), ...mixarr(p2),...mixarr(p1), ...mixarr(p2), ...mixarr(p1), ...mixarr(p2),...mixarr(p1), ...mixarr(p2),...mixarr(p1), ...mixarr(p2),...mixarr(p1), ...mixarr(p2))
   }
   maxI= Math.floor((petsPagination.length-1) / notesOnPage);
 
