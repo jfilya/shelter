@@ -566,6 +566,8 @@ h4 {
 }
 .pagination__circle:active {
   transform: scale(0.9);
+  background: #f1cdb3;
+  border: 2px solid #f1cdb3;
 }
 .pagination__circle:last-child {
   margin-right: 0px;
