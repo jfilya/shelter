@@ -5,7 +5,7 @@ let petsPagination  = [];
 function mixarr(arr){
   return arr.map(i=>[Math.random(), i]).sort().map(i=>i[1])
 }
-petsPagination.push(...pets, ...mixarr(p1), ...mixarr(p2), ...mixarr(p1), ...mixarr(p2), ...mixarr(p1),...mixarr(p2), ...mixarr(p1), ...mixarr(p2), ...mixarr(p1), ...mixarr(p2))
+petsPagination.push(...mixarr(p1), ...mixarr(p2), ...mixarr(p1), ...mixarr(p2), ...mixarr(p1), ...mixarr(p2), ...mixarr(p1),...mixarr(p2), ...mixarr(p1), ...mixarr(p2), ...mixarr(p1), ...mixarr(p2))
 
 
 
