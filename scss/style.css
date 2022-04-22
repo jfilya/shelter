@@ -558,6 +558,14 @@ h4 {
   align-items: center;
   cursor: pointer;
   margin-right: 20px;
+  transition: 0.2s;
+}
+.pagination__circle:hover {
+  background: #FDDCC4;
+  border: 2px solid #FDDCC4;
+}
+.pagination__circle:active {
+  transform: scale(0.9);
 }
 .pagination__circle:last-child {
   margin-right: 0px;
