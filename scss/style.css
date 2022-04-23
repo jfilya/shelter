@@ -838,10 +838,6 @@ h4 {
   --slidesPerScreen: 3;
 }
 
-.scroll {
-  overflow-y: hidden;
-}
-
 @media screen and (max-width: 1279px) {
   :root {
     --slidesPerScreen: 2;

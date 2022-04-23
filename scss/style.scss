@@ -804,9 +804,6 @@ h4 {
   --slidesPerScreen: 3;
 }
 
-.scroll{
-  overflow-y: hidden;
-}
 // адаптив
 @media screen and (max-width: 1279px) {
   :root {
@@ -923,9 +920,6 @@ h4 {
     position: fixed;
     top: 30px;
   }
-  // .logoPets.activeMenu{
-  //   position: absolute;
-  // }
   .item {
     padding-left: 20px;
     padding-right: 20px;
