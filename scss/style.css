@@ -307,6 +307,9 @@ h3 {
 .arrows__btn:hover svg {
   fill: #f1cdb3;
 }
+.arrows__btn:active svg {
+  transform: scale(0.9);
+}
 .arrows__left {
   left: 40px;
 }

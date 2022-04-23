@@ -301,6 +301,12 @@ h3 {
         fill: #f1cdb3;
       }
     }
+    &:active{
+      svg{
+        transform: scale(0.9);
+      }
+    }
+
   }
   &__left {
     left: 40px;
