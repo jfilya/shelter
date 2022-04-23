@@ -1,19 +1,13 @@
 let base = document.querySelector('#base');
-// let notes = pets.slice();
 
 const modalsMain = document.querySelector('.modal');
 const overlaysMain = document.querySelector('.overlay');
-
-
-let notes1 = pets.slice(0,4);
-let notes2 = pets.slice(4);
 
 let notes  = [];
 function mix(arr){
   return arr.map(i=>[Math.random(), i]).sort().map(i=>i[1])
 }
-notes.push(...mix(notes1), ...mix(notes2), ...mix(notes1), ...mix(notes2), ...mix(notes1),...mix(notes2))
-
+notes.push(...mix(pets))
 
 for (let note of notes) {
   let item = document.createElement('div');
