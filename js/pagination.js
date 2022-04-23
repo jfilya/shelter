@@ -121,13 +121,11 @@ function showPage(item) {
         overlays.classList.add('activeOverlay');
         modals.classList.add('activeModal');
         document.querySelector(`.modal-${note.name}`).classList.add('modal-pets');
-        document.querySelector('body').classList.add('scroll');
       });
       
       const closeModels = () => {
         overlays.classList.remove('activeOverlay');
         document.querySelector(`.modal-${note.name}`).classList.remove('modal-pets');
-        document.querySelector('body').classList.remove('scroll');
       };
       overlays.addEventListener('click', closeModels);
 
