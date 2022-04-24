@@ -1,8 +1,6 @@
 let base = document.querySelector("#base");
-
 const modalsMain = document.querySelector(".modal");
 const overlaysMain = document.querySelector(".overlay");
-
 let leftButton = document.querySelector(".prev");
 let rightButton = document.querySelector(".next");
 
@@ -17,7 +15,6 @@ let notesSlider=[];
 notesSlider.push(...mix(pets))
 let notes = notesSlider.splice(0,3);
 function showItem() {
-
 
   base.innerHTML = "";
   for (let note of notes) {
@@ -60,6 +57,7 @@ function showItem() {
     btn.className = "btn btnLearn pets__pet__btn ";
   }
 }
+
 leftButton.onclick = () => {
   notesSlider = notesSlider.concat(...notes)
   notes = notesSlider.splice(0,3);
