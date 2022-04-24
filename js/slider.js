@@ -1,95 +1,76 @@
-let base = document.querySelector('#base');
+let base = document.querySelector("#base");
 
-const modalsMain = document.querySelector('.modal');
-const overlaysMain = document.querySelector('.overlay');
+const modalsMain = document.querySelector(".modal");
+const overlaysMain = document.querySelector(".overlay");
 
-let notes  = [];
-function mix(arr){
-  return arr.map(i=>[Math.random(), i]).sort().map(i=>i[1])
-}
-notes.push(...mix(pets))
+let leftButton = document.querySelector(".prev");
+let rightButton = document.querySelector(".next");
 
-for (let note of notes) {
-  let item = document.createElement('div');
-  base.appendChild(item);
-  item.className = "item"
-  
-  let tr = document.createElement('div');
-  item.appendChild(tr);
-  tr.className = `pets__pet pets__item btn-${note.name}`
-  tr.addEventListener('click', () => {
-    overlaysMain.classList.add('activeOverlay');
-    modalsMain.classList.add('activeModal');
-    document.querySelector(`.modal-${note.name}`).classList.add('modal-pets');
-  });
-
-  const closeModels = () => {
-    overlaysMain.classList.remove('activeOverlay');
-    document.querySelector(`.modal-${note.name}`).classList.remove('modal-pets');
-  };
-  overlaysMain.addEventListener('click', closeModels);
-
-  let img = document.createElement('img');
-  img.src= note.img;
-  img.alt = `pets-${note.name}`
-  tr.appendChild(img);
-  img.className = "pets__pet__image"
-
-  let h = document.createElement('h5');   
-  h.innerHTML= note.name;
-  tr.appendChild(h);
-  h.className = "pets__pet__title";
-
-  let btn = document.createElement('div');   
-  btn.innerHTML= 'Learn more';
-  tr.appendChild(btn);
-  btn.className = "btn btnLearn pets__pet__btn ";
-  
-
+function mix(arr) {
+  return arr
+    .map((i) => [Math.random(), i])
+    .sort()
+    .map((i) => i[1]);
 }
 
+let notesSlider=[];
+notesSlider.push(...mix(pets))
+let notes = notesSlider.splice(0,3);
+function showItem() {
 
-let slides = document.querySelectorAll('.item');//каждая карточка слайда
-let leftButton = document.querySelector('.prev');
-let rightButton = document.querySelector('.next');
 
-function cycle(a,am){
-  return a>=0?a%am:am-(1+ -(a+1)%am)
-}
+  base.innerHTML = "";
+  for (let note of notes) {
+    let item = document.createElement("div");
 
-let shift = 0;
-function slideHandler(shiftValue){// shiftValue-сколько карточек будет переключаться, передаем значение в функцию
-    slides.forEach((it, i)=>{
-      let pos = cycle(shift+shiftValue+i, slides.length);
-      it.style = `transform: translate(calc(${(pos)*100}%));`
-      //перемещает первые элементы массива в конец, делая его бесконечным
+    base.appendChild(item);
+    item.className = "item";
+
+    let tr = document.createElement("div");
+    item.appendChild(tr);
+    tr.className = `pets__pet pets__item btn-${note.name}`;
+    tr.addEventListener("click", () => {
+      overlaysMain.classList.add("activeOverlay");
+      modalsMain.classList.add("activeModal");
+      document.querySelector(`.modal-${note.name}`).classList.add("modal-pets");
     });
-      shift+=shiftValue;  
+
+    const closeModels = () => {
+      overlaysMain.classList.remove("activeOverlay");
+      document
+        .querySelector(`.modal-${note.name}`)
+        .classList.remove("modal-pets");
+    };
+    overlaysMain.addEventListener("click", closeModels);
+
+    let img = document.createElement("img");
+    img.src = note.img;
+    img.alt = `pets-${note.name}`;
+    tr.appendChild(img);
+    img.className = "pets__pet__image";
+
+    let h = document.createElement("h5");
+    h.innerHTML = note.name;
+    tr.appendChild(h);
+    h.className = "pets__pet__title";
+
+    let btn = document.createElement("div");
+    btn.innerHTML = "Learn more";
+    tr.appendChild(btn);
+    btn.className = "btn btnLearn pets__pet__btn ";
   }
-
-  let numberSlider;
-  rez();
-
-  window.addEventListener("resize", rez);
-  
-  function rez() {
-    if (window.innerWidth >= 1280) {      
-      numberSlider = 3; 
-    } 
-    if (window.innerWidth >= 768 && window.innerWidth < 1280) {  
-      numberSlider = 2;
-    }
-    if (window.innerWidth >= 320 && window.innerWidth < 768) {
-      numberSlider = 1; 
-    }
-
 }
-  leftButton.onclick = ()=>{
-    slideHandler(numberSlider)
-  }
-  rightButton.onclick = ()=>{
-    slideHandler(-numberSlider)
-  };
-  
-  
-  slideHandler(0);//запускаем функцию, со стартовой нулевой позицией первой картинки при загрузке страницы
+leftButton.onclick = () => {
+  notesSlider = notesSlider.concat(...notes)
+  notes = notesSlider.splice(0,3);
+  notesSlider=mix(notesSlider)
+  showItem(notes);
+};
+rightButton.onclick = () => {
+  notesSlider = notesSlider.concat(...notes)
+  notes = notesSlider.splice(0,3);
+  notesSlider=mix(notesSlider)
+  showItem(notes);
+};
+
+showItem(0);

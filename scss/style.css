@@ -611,17 +611,17 @@ h4 {
   padding: 60px 0;
   overflow: hidden;
   margin: 0 auto;
+  display: flex;
 }
 
 .item {
   padding-left: 45px;
   padding-right: 45px;
-  width: 100%;
   width: calc(100% / var(--slidesPerScreen));
-  position: absolute;
-  flex-shrink: 0;
   background: #f6f6f6;
   transition: 0.2s;
+  -webkit-animation: showBlock 0.5s linear forwards;
+          animation: showBlock 0.5s linear forwards;
 }
 
 .logoMenu {
