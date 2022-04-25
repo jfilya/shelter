@@ -26,17 +26,24 @@ function rez() {
   }
 
   leftButton.onclick = () => {
+    base.classList.add("transition-left");
     notesSlider = notesSlider.concat(...notes);
     notes = notesSlider.splice(0, notesOnItem);
     notesSlider = mix(notesSlider);
     showItem(notes);
   };
   rightButton.onclick = () => {
+    base.classList.add("transition-right");
     notesSlider = notesSlider.concat(...notes);
     notes = notesSlider.splice(0, notesOnItem);
     notesSlider = mix(notesSlider);
     showItem(notes);
+    
   };
+  base.addEventListener("animationend", () => {
+      base.classList.remove("transition-left");
+      base.classList.remove("transition-right");
+  })
 
   let notesSlider = [];
   notesSlider.push(...mix(pets));
@@ -59,6 +66,7 @@ function rez() {
           .querySelector(`.modal-${note.name}`)
           .classList.add("modal-pets");
         document.querySelector("body").classList.add("scroll");
+
       });
 
       const closeModels = () => {
