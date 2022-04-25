@@ -614,24 +614,24 @@ h4 {
   padding-right: 45px;
   width: calc(100% / var(--slidesPerScreen));
   background: #f6f6f6;
-
+  transition: 5s;
 }
 @keyframes move-right {
-  from {left: -640px;}
+  from {left: 640px;}
   to {left: 0px;}
 }
 
 @keyframes move-left {
-  from {left: 640px;}
+  from {left: -640px;}
   to {left: 0px;}
 }
 .transition-right {
   animation-name: move-right;
-  animation-duration: .3s;
+  animation-duration: .2s;
 }
 .transition-left {
   animation-name: move-left;
-  animation-duration: .3s;
+  animation-duration: .2s;
 }
 .logoMenu {
   opacity: 0;
@@ -1102,12 +1102,12 @@ h4 {
     height: 495px;
   }
   @keyframes move-right {
-    from {left: -100px;}
+    from {left: 100px;}
     to {left: 0px;}
   }
   
   @keyframes move-left {
-    from {left: 100px;}
+    from {left: -100px;}
     to {left: 0px;}
   }
   .pets {

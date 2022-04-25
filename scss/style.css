@@ -623,11 +623,12 @@ h4 {
   padding-right: 45px;
   width: calc(100% / var(--slidesPerScreen));
   background: #f6f6f6;
+  transition: 5s;
 }
 
 @-webkit-keyframes move-right {
   from {
-    left: -640px;
+    left: 640px;
   }
   to {
     left: 0px;
@@ -636,7 +637,7 @@ h4 {
 
 @keyframes move-right {
   from {
-    left: -640px;
+    left: 640px;
   }
   to {
     left: 0px;
@@ -644,7 +645,7 @@ h4 {
 }
 @-webkit-keyframes move-left {
   from {
-    left: 640px;
+    left: -640px;
   }
   to {
     left: 0px;
@@ -652,7 +653,7 @@ h4 {
 }
 @keyframes move-left {
   from {
-    left: 640px;
+    left: -640px;
   }
   to {
     left: 0px;
@@ -661,15 +662,15 @@ h4 {
 .transition-right {
   -webkit-animation-name: move-right;
           animation-name: move-right;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
 }
 
 .transition-left {
   -webkit-animation-name: move-left;
           animation-name: move-left;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
 }
 
 .logoMenu {
@@ -1177,7 +1178,7 @@ h4 {
 
   @-webkit-keyframes move-right {
     from {
-      left: -100px;
+      left: 100px;
     }
     to {
       left: 0px;
@@ -1186,7 +1187,7 @@ h4 {
 
   @keyframes move-right {
     from {
-      left: -100px;
+      left: 100px;
     }
     to {
       left: 0px;
@@ -1194,7 +1195,7 @@ h4 {
   }
   @-webkit-keyframes move-left {
     from {
-      left: 100px;
+      left: -100px;
     }
     to {
       left: 0px;
@@ -1202,7 +1203,7 @@ h4 {
   }
   @keyframes move-left {
     from {
-      left: 100px;
+      left: -100px;
     }
     to {
       left: 0px;
