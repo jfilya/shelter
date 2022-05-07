@@ -2,7 +2,7 @@ let p1 = pets.slice(0,4);
 let p2 = pets.slice(4);
 
 let petsPagination  = [];
-function mixarr(arr){
+const mixarr = (arr) => {
   return arr.map(i=>[Math.random(), i]).sort().map(i=>i[1])
 }
 
@@ -29,7 +29,7 @@ function go() {
     btnNext.classList.remove('disableBtn');
     btnUp.classList.remove('disableBtn');
  
-    function activeNumber(){
+    const activeNumber = () => {
         if(i >= maxI){
             i= maxI;
             btnNext.classList.add('disableBtn');
@@ -45,12 +45,12 @@ function go() {
         }
     }
 
-    btnNext.addEventListener('click', function(){  
+    btnNext.addEventListener('click', () => {  
         i++;
         activeNumber(); 
         showPage(items[i]); 
     })
-    btnPrev.addEventListener('click', function(){   
+    btnPrev.addEventListener('click', () => {   
         i--; 
         if(i<=0){
         i=0;
@@ -60,7 +60,7 @@ function go() {
     activeNumber();  
     showPage(items[i]);   
     })
-    btnDown.addEventListener('click', function(){ 
+    btnDown.addEventListener('click', () => { 
       i=0; 
         showPage(items[i]);  
         btnNext.classList.remove('disableBtn');
@@ -68,7 +68,7 @@ function go() {
         btnPrev.classList.add('disableBtn');
         btnDown.classList.add('disableBtn');    
     })  
-    btnUp.addEventListener('click', function(){
+    btnUp.addEventListener('click', () => {
       i=maxI;
         showPage(items[i]); 
         btnNext.classList.add('disableBtn');
@@ -115,34 +115,36 @@ function showPage(item) {
     tablePagination.innerHTML='';
     for (let note of notesing) {
       let tr = document.createElement('div');
-      table.appendChild(tr);
+      table.append(tr);
       tr.className = `pets__pet petsPets__card  btn-${note.name}`
       tr.addEventListener('click', () => {
         overlays.classList.add('activeOverlay');
         modals.classList.add('activeModal');
         document.querySelector(`.modal-${note.name}`).classList.add('modal-pets');
+        document.querySelector('body').classList.add('scroll');
       });
       
       const closeModels = () => {
         overlays.classList.remove('activeOverlay');
         document.querySelector(`.modal-${note.name}`).classList.remove('modal-pets');
+        document.querySelector('body').classList.remove('scroll');
       };
       overlays.addEventListener('click', closeModels);
 
 
       let img = document.createElement('img');
       img.src= note.img;
-      tr.appendChild(img);
+      tr.append(img);
       img.className = "pets__pet__image"
 
       let h = document.createElement('h5');   
       h.innerHTML= note.name;
-      tr.appendChild(h);
+      tr.append(h);
       h.className = "pets__pet__title";
 
       let btn = document.createElement('div');   
       btn.innerHTML= 'Learn more';
-      tr.appendChild(btn);
+      tr.append(btn);
       btn.className = `btn btnLearn`;  
 
         

@@ -21,8 +21,24 @@ for (let mod of modaling) {
     overlays.classList.remove('activeOverlay');
     modals.classList.remove('activeModal');
     block.classList.remove('modal-pets');
+    document.querySelector('body').classList.remove('scroll');
   })
-
+  overlays.addEventListener("mouseover", () =>  {
+    btnClose.style.background = "#fddcc4";
+    btnClose.style.border = "2px solid #fddcc4";
+  })
+  overlays.addEventListener("mouseout", () =>  {
+    btnClose.style.background = "transparent";
+    btnClose.style.border = "2px solid #fddcc4";
+  })
+  btnClose.addEventListener("mouseover", () =>  {
+    btnClose.style.background = "#fddcc4";
+    btnClose.style.border = "2px solid #fddcc4";
+  })
+  btnClose.addEventListener("mouseout", () =>  {
+    btnClose.style.background = "transparent";
+    btnClose.style.border = "2px solid #fddcc4";
+  })
 
   let imgModal = document.createElement('img')
   imgModal.src = mod.img;

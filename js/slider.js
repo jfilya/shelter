@@ -4,7 +4,7 @@ const overlaysMain = document.querySelector(".overlay");
 let leftButton = document.querySelector(".prev");
 let rightButton = document.querySelector(".next");
 
-function mix(arr) {
+const mix = (arr) => {
   return arr
     .map((i) => [Math.random(), i])
     .sort()
@@ -48,16 +48,16 @@ function rez() {
   let notesSlider = [];
   notesSlider.push(...mix(pets));
   let notes = notesSlider.splice(0, notesOnItem);
-  function showItem() {
+  const showItem = () => {
     base.innerHTML = "";
     for (let note of notes) {
       let item = document.createElement("div");
 
-      base.appendChild(item);
+      base.append(item);
       item.className = "item";
 
       let tr = document.createElement("div");
-      item.appendChild(tr);
+      item.append(tr);
       tr.className = `pets__pet pets__item btn-${note.name}`;
       tr.addEventListener("click", () => {
         overlaysMain.classList.add("activeOverlay");
@@ -81,17 +81,17 @@ function rez() {
       let img = document.createElement("img");
       img.src = note.img;
       img.alt = `pets-${note.name}`;
-      tr.appendChild(img);
+      tr.append(img);
       img.className = "pets__pet__image";
 
       let h = document.createElement("h5");
       h.innerHTML = note.name;
-      tr.appendChild(h);
+      tr.append(h);
       h.className = "pets__pet__title";
 
       let btn = document.createElement("div");
       btn.innerHTML = "Learn more";
-      tr.appendChild(btn);
+      tr.append(btn);
       btn.className = "btn btnLearn pets__pet__btn ";
     }
   }

@@ -40,6 +40,9 @@
   text-size-adjust: none;
   scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+  width: 0;
+}
 
 h1,
 h2,
@@ -185,7 +188,7 @@ button {
   display: none;
 }
 .overlay {
-  width: 0vh;
+  width: 100vw;
   position: fixed;
   z-index: 1;
   height: 100vh;
@@ -193,9 +196,11 @@ button {
   left: 0;
   background: rgba(41, 41, 41, 0.6);
   cursor: pointer;
+  visibility: hidden;
+  transition:0.2s;
 }
 .activeOverlay {
-  width: 100vw;
+  visibility: visible;
 }
 
 .notOnly {
@@ -323,7 +328,7 @@ h3 {
     border-radius: 9px;
     text-align: center;
     background: #fafafa;
-    padding-bottom: 31px;
+    padding-bottom: 30px;
     overflow: hidden;
     transition: all ease 0.5s;
     cursor: pointer;
@@ -341,7 +346,7 @@ h3 {
     }
     &__image {
       display: flex;
-      margin-bottom: 29px;
+      margin-bottom: 30px;
     }
     &__title {
       margin-bottom: 30px;
@@ -361,7 +366,7 @@ h5 {
   cursor: pointer;
 }
 .help {
-  padding-top: 80px;
+  padding-top: 81px;
   padding-bottom: 100px;
   text-align: center;
   &__wrapper {
@@ -505,7 +510,6 @@ h4 {
   top: 0;
   background: #fff;
   z-index: 3;
-  width: 100%;
 }
 .logoPets {
   pointer-events: all;
@@ -536,9 +540,9 @@ h4 {
   width: 100%;
   display: grid;
   grid-column-gap: 40px;
-  grid-row-gap: 32px;
+  grid-row-gap: 30px;
   grid-template-columns: 270px 270px 270px 270px;
-  padding-bottom: 61px;
+  padding-bottom: 60px;
 }
 .pagination {
   display: flex;
@@ -597,9 +601,6 @@ h4 {
 .disable {
   pointer-events: none;
 }
-.petsMain{
-  overflow-x: hidden;
-}
 .base {
   height: 554px;
   width: 1080px;
@@ -614,8 +615,14 @@ h4 {
   padding-right: 45px;
   width: calc(100% / var(--slidesPerScreen));
   background: #f6f6f6;
-  transition: 5s;
+  transition: 0.2s;
 }
+.petsMain{
+  overflow-x: hidden;
+  width: 1080px;
+  margin:0 auto;
+}
+
 @keyframes move-right {
   from {left: 640px;}
   to {left: 0px;}
@@ -633,14 +640,13 @@ h4 {
   animation-name: move-left;
   animation-duration: .2s;
 }
+
 .logoMenu {
   opacity: 0;
   margin-right: 120px;
   position: absolute;
   z-index: 5;
 }
-
-//модальные окна
 .modal {
   width: 100%;
   height: 100%;
@@ -687,7 +693,7 @@ h4 {
   height: 52px;
   border-radius: 100px;
   border: 2px solid #f1cdb3;
-  transition: 0.2s;
+  transition: 0.5s;
   background: transparent;
   img {
     padding-top: 4px;
@@ -802,7 +808,6 @@ h4 {
   background: transparent;
   color: #cdcdcd;
   cursor: default;
-  /* новенькое */
   pointer-events: none;
   animation: showBlock 0.5s linear forwards;
 }
@@ -815,18 +820,19 @@ h4 {
     opacity: 1;
   }
 }
-
 :root {
   --slidesPerScreen: 3;
 }
+.scroll{
+  overflow-y: hidden;
+}
 
-// адаптив
 @media screen and (max-width: 1279px) {
-  :root {
-    --slidesPerScreen: 2;
-  }
   .container {
     padding: 0 30px;
+  }
+  :root {
+    --slidesPerScreen: 2;
   }
   .headerMain {
     padding-top: 31px;
@@ -872,8 +878,12 @@ h4 {
   .base {
     width: 620px;
   }
+  .petsMain{
+    overflow-x: hidden;
+    width: 620px;
+    margin:0 auto;
+  }
   .pets {
-    // grid-column-gap: 40px;
     padding-left: 0px;
     padding-right: 0px;
   }
@@ -917,7 +927,7 @@ h4 {
   .petsPets {
     grid-template-columns: 270px 270px;
     padding-top: 30px;
-    grid-row-gap: 32px;
+    grid-row-gap: 29px;
     padding-bottom: 41px;
     &__card {
       &:nth-child(7) {
@@ -940,7 +950,6 @@ h4 {
     padding-left: 20px;
     padding-right: 20px;
   }
-  // адаптив модальных окон
   .modal-Katrine,
   .modal-Jennifer,
   .modal-Woody,
@@ -983,6 +992,7 @@ h4 {
   .close-Freddie {
     right: -43px;
   }
+  
 }
 
 @media screen and (max-width: 767px) {
@@ -1021,7 +1031,7 @@ h4 {
     transition: 0.5s;
     &__list {
       margin-right: 0px;
-      margin-bottom: 38px;
+      margin-bottom: 39px;
       &:last-child {
         margin-bottom: 0px;
       }
@@ -1101,6 +1111,11 @@ h4 {
     width: 300px;
     height: 495px;
   }
+  .petsMain{
+    overflow-x: hidden;
+    width: 300px;
+    margin:0 auto;
+  }
   @keyframes move-right {
     from {left: 100px;}
     to {left: 0px;}
@@ -1128,7 +1143,7 @@ h4 {
     grid-template-columns: 52px 52px;
     grid-column-gap: 80px;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
     &__btn {
       position: inherit;
     }
@@ -1251,7 +1266,9 @@ h4 {
       }
     }
   }
-  // адаптив модальных окон
+  .item {
+    padding: 0 15px;
+  }
   .modal-Katrine,
   .modal-Jennifer,
   .modal-Woody,
@@ -1291,8 +1308,5 @@ h4 {
       max-width: 220px;
       margin-bottom: 24px;
     }
-  }
-  .item {
-    padding: 0 15px;
   }
 }
